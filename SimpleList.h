@@ -4,6 +4,7 @@
 #pragma once
 #include <iostream>
 #include "Node.h"
+#include "iterator.h"
 
 template <typename T>
 class SimpleList{
@@ -13,6 +14,7 @@ private:
         node * tail;
         unsigned int sizee = 0;
 public:
+   typedef container::iterator<T> iteratorr;
    SimpleList(const SimpleList<T> & list){
 
     }
@@ -27,32 +29,16 @@ public:
            pop_front();
     }
 
-    // Inserta un elemento al final
     void push_back(const T& element);
-
-    // Inserta un elemento al inicio
     void push_front(const T& element);
-//
-//    virtual // Quita el ultimo elemento y retorna una referencia
     T& pop_back(void);
-//
-//    virtual // Quita el primer elemento y retorna una referencia
     T& pop_front(void);
-//
-//    virtual // Acceso aleatorio
     T& operator[] (const int&);
-//
-//    virtual // la lista esta vacia?
     bool empty(void);
-//
-//    virtual // retorna el tamaño de la lista
     unsigned int size(void);
-//
-//    virtual // Elimina toda la lista
     void clear(void);
-//
-
-
+    iteratorr begin(){return iteratorr(head);}
+    iteratorr end() {return iteratorr(tail->next);}
     inline friend std::ostream& operator<<(std::ostream& os , const SimpleList<T>& list){
         Node<T> * pointer = list.head;
         while (pointer != nullptr){
@@ -149,3 +135,4 @@ void SimpleList<T>::clear(void){
     while(head != nullptr)
         pop_front();
 }
+

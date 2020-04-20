@@ -14,6 +14,7 @@ class doubleList{
     doubleNodeH * rHead;
     int sizee = 0;
 public:
+    typedef container::iterator2<T> iteratorr;
     doubleList();
     ~doubleList();
     T getFront()const;
@@ -30,6 +31,11 @@ public:
     bool empty();
     unsigned int size();
     void clear();
+    iteratorr begin(){return iteratorr(head->nextNode);}
+    iteratorr end() {return iteratorr(rHead);}
+//    iteratorr rbegin(){return iteratorr(rHead->prevNode);}
+//    iteratorr rend() {return iteratorr(head);}
+
 };
 
 template <typename T>

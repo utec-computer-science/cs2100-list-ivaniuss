@@ -5,7 +5,7 @@
 #pragma once
 #include <iostream>
 #include "Node.h"
-
+#include "iterator.h"
 template <typename T>
 class CircularSimpleList{
 private:
@@ -14,6 +14,7 @@ private:
     node * tail;
     unsigned int sizee = 0;
 public:
+    typedef container::iterator<T> iteratorr;
     CircularSimpleList(const CircularSimpleList<T> & list){
 
     }
@@ -36,7 +37,8 @@ public:
     bool empty();
     unsigned int size();
     void clear();
-
+    iteratorr begin(){return iteratorr(head);}
+    iteratorr end() {return iteratorr(tail);}
     inline friend std::ostream& operator<<(std::ostream& os , const CircularSimpleList<T>& list){
         Node<T> * pointer = list.head;
         Node<T> *temp = list.head;
@@ -160,6 +162,7 @@ class doubleCircularList {
     doubleNode *rHead;
     int sizee = 0;
 public:
+    typedef container::iterator2<T> iteratorr;
     doubleCircularList();
     ~doubleCircularList();
     T getFront()const;
@@ -176,6 +179,10 @@ public:
     bool empty();
     unsigned int size();
     void clear();
+    iteratorr begin(){return iteratorr(head->nextNode);}
+    iteratorr end() {return iteratorr(rHead);}
+//    iteratorr rbegin(){return iteratorr(rHead->prevNode);}
+//    iteratorr rend() {return iteratorr(head);}
 
 };
 
