@@ -75,7 +75,10 @@ public:
 
 
     value_t front(){
+      if(size > 0)
         return head->value;
+      else
+        throw out_of_range("INDEX OUT OF RANGE");
     }
 
     value_t back(){
@@ -123,32 +126,64 @@ public:
     }
 
 
+   template<int nodeType>
+    void __pop_front__(Node**,Node**,int& size);
+
+    void pop_front(){
+        __pop_front__<NodeTraits<node_t,value_t>::nodeType>(&head,&tail,size);
+    }
+
+
+   template<int nodeType>
+    void __clear__(Node**,Node**,int& size);
+
+    void clear(){
+        __clear__<NodeTraits<node_t,value_t>::nodeType>(&head,&tail,size);
+    }
+
+    template<int nodeType>
+    void __erase__(Node**,Node**,value_t,int&);
+    
+    void erase(const value_t& element){
+        __erase__<NodeTraits<node_t,value_t>::nodeType>(&head,&tail,element,size);
+    }
+
     template<typename _T>
     inline friend ostream& operator<< (ostream& out, const List<_T>& list){
+        auto * pointer = list.head;
+        while (pointer != list.tail){
+            out << pointer->value << " ";
+            pointer = pointer->next;
+        }
+
+            out << pointer->value << " ";
+            
+        
         return out;
     }
 
 
     //ITERATORS
 
+    template<int nodeType>
+    Node** __begin__(Node**);
 
-    //virtual Iterator begin() = 0;
-    //virtual Iterator end() = 0;
-
-
-    //SOBRECARGA << Y >>
-    /*
-    List& operator<< (const value_t& _value){
-        this->push_back(_value);
-        return *this;
+    Iterator begin(){
+        Iterator it(*(__begin__<NodeTraits<node_t,value_t>::nodeType>(&head)));
+        return it;
     }
 
-    List& operator>> (const value_t& _value){
-        this->push_front(_value);
-        return *this;
-    }
-     */
 
+    template<int nodeType>
+    Node** __end__(Node**);
+
+    Iterator end(){
+        Iterator it(*(__end__<NodeTraits<node_t,value_t>::nodeType>(&head)));
+        return it;
+    }
+
+
+ 
 };
 
 
