@@ -1,26 +1,48 @@
 //
-// Created by ivaniuss on 4/17/20.
+// Created by Maor Roizman Gheiler on 5/11/20.
 //
 
-#pragma once
+#ifndef TEST_LISTAS_FINAL_NODE_H
+#define TEST_LISTAS_FINAL_NODE_H
+
+#include<iostream>
+using namespace std;
+
 template <typename T>
 class Node {
 public:
-    T value;
-    Node<T> * next;
-    Node(void){next = nullptr;}
-//    Node(const T & v, const Node<T>* &n) : value(v), next(n){};
-    ~Node(void){ next = nullptr;}
+    typedef T value_t;
+    typedef unsigned int size_t;
+
+public:
+    value_t value;
+
+public:
+    Node(const value_t& _value):value(_value){
+    }
+
+    size_t size(){
+        return 0;
+    }
+
+    ~Node(void){
+    }
+
+    value_t& operator*(void){
+        return value;
+    }
+
+    template <typename _T>
+    inline friend ostream& operator<< (ostream& _out, const Node<_T>& _node){
+        _out << "Nodo: " <<  _node.value;
+        return _out;
+    }
 };
 
-template <typename T>
-class NodeD {
-public:
-    typedef NodeD<T> Node;
-    T value;
-    Node * nextNode;
-    Node * prevNode;
-    NodeD<T>(){nextNode = nullptr; prevNode = nullptr;}
-//    Node(const T & v, const Node<T>* &n) : value(v), next(n){};
-    ~NodeD<T>(){ nextNode = nullptr; prevNode = nullptr;}
-};
+
+
+
+
+
+
+#endif //TEST_LISTAS_FINAL_NODE_H
