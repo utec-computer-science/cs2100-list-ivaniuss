@@ -1,11 +1,9 @@
 #include<iostream>
 using namespace std;
-
 #include "Node.h"
 #include "List.h"
 #include "NodeTraits.h"
 #include "ListHelper.h"
-
 
 
 int main (int, char *[]){

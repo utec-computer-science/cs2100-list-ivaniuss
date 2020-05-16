@@ -1,9 +1,5 @@
-//
-// Created by Maor Roizman Gheiler on 5/11/20.
-//
-
-#ifndef TEST_LISTAS_FINAL_DOUBLENODE_H
-#define TEST_LISTAS_FINAL_DOUBLENODE_H
+#ifndef LISTAS_DOUBLENODE_H
+#define LISTAS_DOUBLENODE_H
 
 #include<iostream>
 #include "Node.h"
@@ -32,4 +28,5 @@ public:
     }
 };
 
-#endif //TEST_LISTAS_FINAL_DOUBLENODE_H
+#endif //LISTAS_DOUBLENODE_H
+

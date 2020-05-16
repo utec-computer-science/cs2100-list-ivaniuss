@@ -1,9 +1,5 @@
-//
-// Created by Maor Roizman Gheiler on 5/11/20.
-//
-
-#ifndef TEST_LISTAS_FINAL_NODE_H
-#define TEST_LISTAS_FINAL_NODE_H
+#ifndef LISTAS_NODE_H
+#define LISTAS_NODE_H
 
 #include<iostream>
 using namespace std;
@@ -39,10 +35,5 @@ public:
     }
 };
 
+#endif //LISTAS_NODE_H
 
-
-
-
-
-
-#endif //TEST_LISTAS_FINAL_NODE_H

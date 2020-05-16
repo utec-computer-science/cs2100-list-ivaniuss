@@ -1,9 +1,5 @@
-//
-// Created by Maor Roizman Gheiler on 5/11/20.
-//
-
-#ifndef TEST_LISTAS_FINAL_LIST_H
-#define TEST_LISTAS_FINAL_LIST_H
+#ifndef LISTAS_LIST_H
+#define LISTAS_LIST_H
 
 #include<iostream>
 #include "NodeTraits.h"
@@ -156,4 +152,5 @@ public:
 };
 
 
-#endif //TEST_LISTAS_FINAL_LIST_H
+#endif //LISTAS_LIST_H
+

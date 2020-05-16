@@ -1,9 +1,5 @@
-//
-// Created by Maor Roizman Gheiler on 5/11/20.
-//
-
-#ifndef TEST_LISTAS_FINAL_NODETRAITS_H
-#define TEST_LISTAS_FINAL_NODETRAITS_H
+#ifndef LISTAS_NODETRAITS_H
+#define LISTAS_NODETRAITS_H
 
 
 #include <iostream>
@@ -42,4 +38,5 @@ struct NodeTraits< CircularListNode<NT>, NT >{
 
 
 
-#endif //TEST_LISTAS_FINAL_NODETRAITS_H
+#endif //LISTAS_NODETRAITS_H
+

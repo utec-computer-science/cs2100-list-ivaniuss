@@ -1,9 +1,5 @@
-//
-// Created by Maor Roizman Gheiler on 5/11/20.
-//
-
-#ifndef TEST_LISTAS_FINAL_CIRCULARNODE_H
-#define TEST_LISTAS_FINAL_CIRCULARNODE_H
+#ifndef LISTAS_CIRCULARNODE_H
+#define LISTAS_CIRCULARNODE_H
 
 #include<iostream>
 #include "Node.h"
@@ -34,4 +30,5 @@ public:
 
 
 
-#endif //TEST_LISTAS_FINAL_CIRCULARNODE_H
+#endif //LISTAS_CIRCULARNODE_H
+

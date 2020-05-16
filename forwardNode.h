@@ -1,9 +1,5 @@
-//
-// Created by Maor Roizman Gheiler on 5/11/20.
-//
-
-#ifndef TEST_LISTAS_FINAL_FORWARDNODE_H
-#define TEST_LISTAS_FINAL_FORWARDNODE_H
+#ifndef LISTAS_FORWARDNODE_H
+#define LISTAS_FORWARDNODE_H
 
 #include <iostream>
 #include "Node.h"
@@ -31,4 +27,5 @@ public:
     }
 };
 
-#endif //TEST_LISTAS_FINAL_FORWARDNODE_H
+#endif //LISTAS_FORWARDNODE_H
+

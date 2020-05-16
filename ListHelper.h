@@ -1,9 +1,5 @@
-//
-// Created by Maor Roizman Gheiler on 5/11/20.
-//
-
-#ifndef TEST_LISTAS_FINAL_LISTHELPER_H
-#define TEST_LISTAS_FINAL_LISTHELPER_H
+#ifndef LISTAS_LISTHELPER_H
+#define LISTAS_LISTHELPER_H
 
 #include <iostream>
 #include "List.h"
@@ -192,4 +188,5 @@ void List<Node>::__push_front__(
     ListHelper<List<Node>::node_t,List<Node>::value_t,nodeType>::push_front(head,tail,element, size);
 }
 
-#endif //TEST_LISTAS_FINAL_LISTHELPER_H
+#endif //LISTAS_LISTHELPER_H
+
